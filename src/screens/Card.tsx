@@ -3,6 +3,14 @@ import React from 'react'
 import { colors } from './colors'
 import Connections from './Connections'
 
+const accounts = [
+    {id:"1",name:"GitHub"},
+]
+    
+
+
+
+
 export default function Card() {
   return (
     <View style={styles.card}>
@@ -11,7 +19,10 @@ export default function Card() {
         <Text style={styles.location}>Utrecht</Text>
         <Text style={styles.job}>Mobile Developer</Text>
         <View>
-            <Connections/>
+            {accounts.map((item) => (
+                    <Connections siteName={item.name}/>
+            ))}
+        
         </View>
      
     </View>
@@ -49,6 +60,7 @@ const styles = StyleSheet.create({
     job: {
         marginTop: 20,
         color: colors.white,
+        marginBottom:20
 
 
     }
