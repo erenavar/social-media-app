@@ -1,6 +1,7 @@
 import { StyleSheet, Dimensions, View, Image,Text } from 'react-native'
 import React from 'react'
 import { colors } from './colors'
+import Connections from './Connections'
 
 export default function Card() {
   return (
@@ -8,7 +9,10 @@ export default function Card() {
         <Image style={styles.img} source={require("../../assets/photo.jpg")}/>
         <Text style={styles.fullName}>Eren AVAR</Text>
         <Text style={styles.location}>Utrecht</Text>
-        <Text style={styles.job}>Mobile - Frontend Developer</Text>
+        <Text style={styles.job}>Mobile Developer</Text>
+        <View>
+            <Connections/>
+        </View>
      
     </View>
   )
@@ -18,7 +22,7 @@ const styles = StyleSheet.create({
     card : {
         width: Dimensions.get("window").width - 90,
         height:400,
-        backgroundColor : colors.gray,
+        backgroundColor : colors.darkgray,
         borderRadius:12,
         alignItems:"center",
         paddingTop:24,
