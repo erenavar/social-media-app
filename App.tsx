@@ -1,19 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, StyleSheet, SafeAreaView,StatusBar} from 'react-native';
 import HomeScreen from './src/screens/HomeScreen';
+import { colors } from './src/screens/colors';
 
 export default function App() {
   return (
-    <View style={styles.container} >
+
+    <View  style={styles.container} >
+      <StatusBar barStyle='light-content'/>
       <HomeScreen/>
     </View>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.black,
     alignItems: 'center',
     justifyContent: 'center',
   },

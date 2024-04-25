@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
        marginBottom: 10,
        width: Dimensions.get("window").width-150,
        borderRadius:10,
-        padding:15,
-        marginVertical:5,
+       padding:15,
+       marginVertical:5,
        alignItems:"center"
        
 

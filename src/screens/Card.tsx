@@ -21,7 +21,6 @@ export default function Card() {
             {accounts.map((item) => (
                     <Connections key={item.id} siteName={item.name} adress={item.URL}/>
             ))}
-        
         </View>
      
     </View>
@@ -31,7 +30,6 @@ export default function Card() {
 const styles = StyleSheet.create({
     card : {
         width: Dimensions.get("window").width - 90,
-
         backgroundColor : colors.darkgray,
         borderRadius:12,
         alignItems:"center",
