@@ -9,6 +9,7 @@ export default function App() {
     <View  style={styles.container} >
       <StatusBar barStyle='light-content'/>
       <HomeScreen/>
+
     </View>
 
   );
