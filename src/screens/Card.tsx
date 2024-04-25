@@ -4,11 +4,10 @@ import { colors } from './colors'
 import Connections from './Connections'
 
 const accounts = [
-    {id:"1",name:"GitHub"},
+    {id:"1",name:"GitHub",URL:"https://github.com/erenavar"},
+    {id:"2",name:"Linkedin",URL:"https://www.linkedin.com/in/erenavar/"},
+    {id:"3",name:"Instagram",URL:"https://www.instagram.com/erenavarr/"},
 ]
-    
-
-
 
 
 export default function Card() {
@@ -20,7 +19,7 @@ export default function Card() {
         <Text style={styles.job}>Mobile Developer</Text>
         <View>
             {accounts.map((item) => (
-                    <Connections siteName={item.name}/>
+                    <Connections key={item.id} siteName={item.name} adress={item.URL}/>
             ))}
         
         </View>
@@ -32,12 +31,13 @@ export default function Card() {
 const styles = StyleSheet.create({
     card : {
         width: Dimensions.get("window").width - 90,
-        height:400,
+
         backgroundColor : colors.darkgray,
         borderRadius:12,
         alignItems:"center",
-        paddingTop:24,
-        marginBottom:150
+        marginBottom:150,
+        padding:24
+
     },
     img:{
         width: 90,

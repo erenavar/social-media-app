@@ -1,11 +1,16 @@
-import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { colors } from './colors'
 
-export default function Connections({siteName}) {
+export default function Connections({siteName,adress}) {
+
+    const openUrl = (link) => {
+        Linking.openURL(link)
+    }
+
   return (
     <View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity onPress={() => openUrl(adress)}  style={styles.button}>
         <Text style={styles.text}>{siteName}</Text>
     </TouchableOpacity>
     </View>
